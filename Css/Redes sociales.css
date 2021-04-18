@@ -5,6 +5,10 @@
   padding: 0;
 }
 
+body {
+  background: #F1F1F1;
+}
+
 #switch {
   background: #F1F1F1;
   padding: 1em;
