@@ -1,0 +1,1144 @@
+* {
+  font-family: "Noto sans", sans-serif;
+  color: #111111;
+}
+
+#cabecera {
+  background: #F1F1F1;
+  text-align: center;
+  width: 100%;
+  max-width: 87.5em;
+  height: 20%;
+  max-height: 31.25em;
+}
+
+body.dark #cabecera {
+  background: #111111;
+}
+
+body.dark #cabecera h1 span {
+  color: #FEFEFE;
+}
+
+body.dark #cabecera h1 span i {
+  color: #FEFEFE;
+}
+
+body.dark #cabecera h2 {
+  color: #FEFEFE;
+}
+
+body.dark #cabecera h3 {
+  color: #FEFEFE;
+}
+
+.logotipo {
+  margin: 0.625em;
+  padding: 0.625em;
+  display: inline-block;
+  width: 50%;
+  max-width: 43.75em;
+  height: 240px;
+  max-height: 15em;
+  border: 5px solid #1A1A1A;
+  color: #1A1A1A;
+  text-align: center;
+  text-decoration: none;
+}
+
+.logotipo .subtitulo {
+  text-align: center;
+  color: #F2F2F2;
+  background: #1A1A1A;
+  padding: 0.75em 1.25em;
+  margin: 0em;
+  -webkit-transition: .5s ease all;
+  transition: .5s ease all;
+  font-size: 2.25em;
+  font-family: "Noto sans", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.logotipo:hover .subtitulo {
+  background: #2E5FFF;
+  text-decoration: none;
+}
+
+.texto-animado {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.texto-animado > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+}
+
+.texto-animado > div.animacion {
+  -webkit-transform: translateY(-100px);
+          transform: translateY(-100px);
+}
+
+.texto-animado > div span {
+  color: red;
+  font-size: 3.125em;
+  font-weight: normal;
+  line-height: 100px;
+}
+
+.texto-animado .segunda-linea {
+  position: absolute;
+  top: 100px;
+}
+
+/*.Tooltip.activo{
+      opacity: 1;
+      transform: translateY(0px);
+   }*/
+.Tooltip {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  background: #fff;
+  border-radius: 10px;
+  -webkit-box-shadow: 5px 5px 50px rgba(0, 0, 0, 0.2);
+          box-shadow: 5px 5px 50px rgba(0, 0, 0, 0.2);
+  width: 500px;
+  max-width: 31.25em;
+  height: 530px;
+  max-height: 33.125em;
+  z-index: 1000;
+  opacity: 0;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+}
+
+.Tooltip:hover {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
+.Tooltip .info {
+  width: 60%;
+  padding: 1.25em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.Tooltip .info .titulo {
+  font-size: 1.25em;
+  color: #3c48e5;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.Tooltip .info .parrafo {
+  color: #707070;
+  font-size: 0.75em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.Tooltip .info .parrafoDos {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.Tooltip .info button {
+  border: none;
+  background: #75ac35;
+  font-weight: bold;
+  padding: 0.625em 1.25em;
+  width: 80%;
+  color: #fff;
+  border-radius: 100px;
+  font-family: "Open-Sans", sans-serif;
+  cursor: pointer;
+  text-align: center;
+}
+
+.Tooltip .info button:hover {
+  background: rgba(117, 172, 53, 0.9);
+}
+
+.Tooltip::after {
+  content: "";
+  display: inline-block;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid #fff;
+  position: absolute;
+  right: -15px;
+  bottom: calc(65%);
+}
+
+.Tooltip .thumb {
+  height: 40%;
+}
+
+.Tooltip .thumb img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px 10 0 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .Tooltip {
+    font-size: 12px;
+  }
+  .Tooltip .info button {
+    width: 100%;
+  }
+}
+
+h1 {
+  font-size: 1.875em;
+  color: #111111;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.25em;
+  color: #111111;
+  text-align: right;
+}
+
+h3 {
+  font-size: 1.25em;
+  color: #111111;
+  text-align: right;
+}
+
+h4 {
+  text-align: center;
+  font-size: 2.375em;
+}
+
+body {
+  background: #FEFEFE;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+  margin: 0;
+  padding: 0;
+}
+
+body.dark {
+  background: #111111;
+}
+
+body.dark h4 {
+  color: #FEFEFE;
+}
+
+.switch {
+  background: #343d5b;
+  border-radius: 1000px;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  outline: none;
+}
+
+.switch::after {
+  content: "";
+  display: block;
+  width: 36px;
+  max-width: 2.2em;
+  height: 36px;
+  max-height: 2.2em;
+  position: absolute;
+  background: #FEFEFE;
+  top: 0;
+  left: 0;
+  right: unset;
+  border-radius: 100px;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+  -webkit-box-shadow: 0px, 0px, 2px 2px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px, 0px, 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.switch.active {
+  background: orange;
+  color: #111111;
+}
+
+.switch.active::after {
+  right: 0;
+  left: unset;
+}
+
+.switch span {
+  width: 30px;
+  max-width: 2.2em;
+  height: 30px;
+  max-height: 2.2em;
+  line-height: 30px;
+  display: block;
+  background: none;
+  color: #FEFEFE;
+}
+
+#enganche {
+  height: 15%;
+  max-height: 23.625em;
+  width: 100%;
+  max-width: 87.5em;
+  background: #c42419;
+  display: inline-block;
+  margin: none;
+  padding: none;
+  text-align: center;
+  font-size: 1.875em;
+}
+
+#enganche pre {
+  font-weight: 600;
+}
+
+body.dark #enganche {
+  background: 10px, 10px, 20px rgba(170, 170, 170, 0.16);
+}
+
+body.dark #enganche pre i {
+  color: #FEFEFE;
+}
+
+#intereses {
+  height: 15%;
+  max-height: 23.625em;
+  width: 100%;
+  max-width: 87.5em;
+  display: inline-block;
+  margin: none;
+  padding: none;
+  background: #64C4A1;
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+#intereses pre {
+  font-weight: 600;
+}
+
+body.dark #intereses {
+  background: #222222;
+  -webkit-box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.16);
+          box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.16);
+}
+
+body.dark #intereses pre {
+  color: #C8C8C8;
+}
+
+body.dark #intereses a {
+  color: #C8C8C8;
+}
+
+body.dark #intereses a:hover {
+  color: #FEFEFE;
+  font-size: 1.5625rem;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+}
+
+.enlaces {
+  color: #111111;
+  font-weight: 600;
+  font-size: 1.25rem;
+  text-decoration: none;
+}
+
+.enlaces:hover {
+  color: #03256e;
+  text-decoration: underline;
+  font-size: 1.5625rem;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+}
+
+#imagenes {
+  background: #F1F1F1;
+  height: 40%;
+  max-height: 62.50em;
+  width: 100%;
+  max-width: 87.5em;
+  display: inline-block;
+  margin: none;
+  padding: none;
+  font-size: 1.25em;
+  text-align: center;
+}
+
+body.dark #imagenes {
+  color: #FEFEFE;
+  background: #222222;
+}
+
+body.dark #imagenes a {
+  color: #fff;
+}
+
+.img {
+  margin: none;
+  padding: none;
+  border: 1px solid #111111;
+  width: 300px;
+  max-width: 18.75em;
+  height: 300px;
+  max-height: 18.75em;
+}
+
+.img:hover {
+  width: 450px;
+  max-width: 28.125em;
+  height: 350px;
+  max-height: 21.875em;
+  -webkit-transition: 300ms all;
+  transition: 300ms all;
+}
+
+.miTooltip {
+  font-weight: normal;
+  color: #111111;
+  text-decoration: none;
+  position: relative;
+}
+
+.miTooltip:hover .tooltip-box {
+  opacity: 1;
+}
+
+.tooltip-box {
+  opacity: 0;
+  position: absolute;
+  background: #000;
+  line-height: 20px;
+  z-index: 500;
+  text-align: center;
+  color: #fff;
+  font-size: 0.875rem;
+  padding: 0.3125em 0.625em;
+  border-radius: 5px;
+  left: 0;
+  right: 0;
+  bottom: 30px;
+}
+
+.tooltip-box::after {
+  content: "";
+  display: block;
+  border-top: 20px solid #000;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  position: absolute;
+  bottom: -10px;
+  left: calc(50% - 7px);
+}
+
+form {
+  height: 10%;
+  max-height: 30em;
+  width: 25%;
+  max-width: 43.75em;
+  border: 1px solid #FEFEFE;
+  margin: 1.25em;
+  padding: 1.25em;
+  border: 1px solid #111111;
+}
+
+.formulario {
+  text-align: center;
+}
+
+.formulario form label {
+  line-height: 30px;
+  font-size: 0.9375em;
+  font-weight: 500;
+}
+
+body.dark .formulario form label {
+  color: #FEFEFE;
+  line-height: 30px;
+  font-size: 0.9375em;
+  font-weight: 500;
+}
+
+.formulario form input {
+  height: 15px;
+  text-align: center;
+  line-height: 52px;
+  font-size: 0.9375em;
+  font-weight: 500;
+  border: 1px solid #BBBBBB;
+}
+
+.formulario form textarea {
+  text-align: center;
+  font-size: 0.9375em;
+  font-weight: 500;
+  width: 330px;
+  max-width: 20.625em;
+  height: 80px;
+  max-height: 5em;
+  border: 1px solid #BBBBBB;
+}
+
+.formulario form #btn-abrir-popup {
+  padding: 0 1.25em;
+  height: 40px;
+  line-height: 40px;
+  border: none;
+  color: #FEFEFE;
+  background: #357DE3;
+  border-radius: 3px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+  cursor: pointer;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+}
+
+.formulario form #btn-abrir-popup:hover {
+  background: rgba(94, 125, 227, 0.9);
+}
+
+body.dark .formulario {
+  background: 10px, 10px, 20px rgba(170, 170, 170, 0.16);
+  -webkit-box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.16);
+          box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.16);
+  color: #FEFEFE;
+}
+
+body.dark .formulario form {
+  color: #FEFEFE;
+}
+
+.contenedor {
+  width: 90%;
+  max-width: 78.75em;
+  margin: 1.25em auto;
+  text-align: center;
+}
+
+.contenedor .btn-abrir-popup {
+  padding: 0 1.25em;
+  margin-bottom: 20px;
+  height: 40px;
+  line-height: 40px;
+  border: none;
+  color: #FEFEFE;
+  background: #5f7de3;
+  border-radius: 3px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+  cursor: pointer;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+  cursor: pointer;
+}
+
+.contenedor .btn-abrir-popup:hover {
+  background: rgba(94, 125, 227, 0.9);
+}
+
+body.dark .contenedor #parrafo {
+  color: #FEFEFE;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  visibility: hidden;
+}
+
+.overlay .active {
+  visibility: visible;
+}
+
+.popup {
+  background: #f8f8f8;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+  font-family: "Montserrat", sans-serif;
+  padding: 1.25em;
+  text-align: center;
+  width: 600px;
+  max-width: 37.5em;
+  height: 570px;
+  max-height: 35.625em;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+  opacity: 0;
+}
+
+.popup .btn-cerrar-popup {
+  font-size: 1em;
+  line-height: 16px;
+  display: block;
+  text-align: right;
+  color: #BBBBBB;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+}
+
+.popup h5 {
+  font-size: 1em;
+  font-weight: 500;
+  opacity: 0;
+}
+
+.popup form {
+  width: 80%;
+  max-width: 70em;
+  height: 425px;
+  max-height: 26.5625em;
+  border: 1px solid #111111;
+  opacity: 0;
+}
+
+.popup form label {
+  font-size: 0.8125rem;
+  font-weight: 500;
+}
+
+.popup form input {
+  height: 15px;
+  text-align: center;
+  line-height: 52px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  border: 1px solid #BBBBBB;
+}
+
+.popup form textarea {
+  text-align: center;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  border: 1px solid #BBBBBB;
+}
+
+.popup form select {
+  font-size: 0.8125rem;
+  font-weight: 500;
+}
+
+.popup form .btn-submit {
+  padding: 0 1.25em;
+  height: 40px;
+  line-height: 40px;
+  border: none;
+  color: #FEFEFE;
+  background: #357DE3;
+  border-radius: 3px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+  cursor: pointer;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+}
+
+.popup form .btn-submit:hover {
+  background: rgba(94, 125, 227, 0.9);
+}
+
+.popup.active {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.popup.active h5 {
+  -webkit-animation: entradaTitulo 2s ease .5s forwards;
+          animation: entradaTitulo 2s ease .5s forwards;
+}
+
+.popup form {
+  -webkit-animation: entradaForm 1s ease 2s forwards;
+          animation: entradaForm 1s ease 2s forwards;
+}
+
+@-webkit-keyframes entradaTitulo {
+  from {
+    -webkit-transform: translateY(-25px);
+            transform: translateY(-25px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes entradaTitulo {
+  from {
+    -webkit-transform: translateY(-25px);
+            transform: translateY(-25px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes entradaForm {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes entradaForm {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1200px) {
+  .logotipo {
+    width: 80%;
+    height: 50%;
+  }
+  .logotipo .subtitulo {
+    font-size: 16px;
+  }
+  .texto-animado > div span {
+    font-size: 40px;
+  }
+  .typed {
+    font-size: 20px;
+  }
+  .Tooltip {
+    width: 500px;
+    height: 300px;
+  }
+  .Tooltip .info .titulo {
+    font-size: 14px;
+  }
+  .Tooltip .info .parrafo {
+    font-size: 12px;
+  }
+  .Tooltip .info .parrafoDos {
+    font-size: 11px;
+  }
+  .Tooltip .info button {
+    width: 100%;
+    height: 10%;
+    font-size: 11px;
+  }
+  .Tooltip .thumb {
+    height: 100%;
+  }
+  .Tooltip .thumb img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 200px;
+    height: 200px;
+    opacity: 1;
+  }
+  #enganche {
+    font-size: 16px;
+  }
+  #intereses {
+    font-size: 16px;
+  }
+  #intereses a {
+    font-size: 16px;
+  }
+  body.dark #intereses a:hover {
+    font-size: 17px;
+  }
+  #intereses a:hover {
+    font-size: 17px;
+  }
+  #imagenes {
+    font-size: 16px;
+  }
+  #imagenes .img {
+    width: 230px;
+    height: 230px;
+  }
+  #imagenes .img:hover {
+    width: 250px;
+    height: 250px;
+  }
+  form {
+    width: 400px;
+  }
+  .popup {
+    height: 550px;
+    width: 520px;
+  }
+  .popup form {
+    height: 430px;
+    line-height: 18px;
+  }
+  .popup form label {
+    font-size: 12px;
+  }
+  .popup form input {
+    font-size: 12px;
+  }
+  .popup form textarea {
+    font-size: 12px;
+  }
+  .popup form select {
+    font-size: 12px;
+  }
+  .popup form .btn-submit {
+    font-size: 12px;
+    height: 40px;
+    width: 80px;
+  }
+}
+
+@media (max-width: 992px) {
+  .logotipo {
+    width: 80%;
+    height: 50%;
+  }
+  .logotipo .subtitulo {
+    font-size: 16px;
+  }
+  .texto-animado > div span {
+    font-size: 40px;
+  }
+  .typed {
+    font-size: 20px;
+  }
+  .Tooltip {
+    width: 500px;
+    height: 300px;
+  }
+  .Tooltip .info .titulo {
+    font-size: 14px;
+  }
+  .Tooltip .info .parrafo {
+    font-size: 12px;
+  }
+  .Tooltip .info .parrafoDos {
+    font-size: 11px;
+  }
+  .Tooltip .info button {
+    width: 100%;
+    height: 10%;
+    font-size: 11px;
+  }
+  .Tooltip .thumb {
+    height: 100%;
+  }
+  .Tooltip .thumb img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 150px;
+    height: 150px;
+    opacity: 0;
+  }
+  #enganche {
+    font-size: 16px;
+  }
+  #intereses {
+    font-size: 16px;
+  }
+  #intereses a {
+    font-size: 16px;
+  }
+  body.dark #intereses a:hover {
+    font-size: 17px;
+  }
+  #intereses a:hover {
+    font-size: 17px;
+  }
+  #imagenes {
+    font-size: 16px;
+  }
+  #imagenes .img {
+    width: 200px;
+    height: 200px;
+  }
+  #imagenes .img:hover {
+    width: 250px;
+    height: 250px;
+  }
+  form {
+    width: 400px;
+  }
+  .popup {
+    height: 550px;
+    width: 520px;
+  }
+  .popup form {
+    height: 430px;
+    line-height: 18px;
+  }
+  .popup form label {
+    font-size: 12px;
+  }
+  .popup form input {
+    font-size: 12px;
+  }
+  .popup form textarea {
+    font-size: 12px;
+  }
+  .popup form select {
+    font-size: 12px;
+  }
+  .popup form .btn-submit {
+    font-size: 12px;
+    height: 40px;
+    width: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .logotipo {
+    width: 80%;
+    height: 50%;
+  }
+  .logotipo .subtitulo {
+    font-size: 16px;
+  }
+  .texto-animado > div span {
+    font-size: 40px;
+  }
+  .typed {
+    font-size: 20px;
+  }
+  .Tooltip {
+    width: 500px;
+    height: 300px;
+  }
+  .Tooltip .info .titulo {
+    font-size: 12px;
+  }
+  .Tooltip .info .parrafo {
+    font-size: 10px;
+  }
+  .Tooltip .info .parrafoDos {
+    font-size: 9px;
+  }
+  .Tooltip .info button {
+    width: 100%;
+    height: 10%;
+    font-size: 9px;
+  }
+  .Tooltip .thumb {
+    height: 100%;
+  }
+  .Tooltip .thumb img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 130px;
+    height: 130px;
+    opacity: 0;
+  }
+  #enganche {
+    font-size: 16px;
+  }
+  #intereses {
+    font-size: 16px;
+  }
+  #intereses a {
+    font-size: 16px;
+  }
+  body.dark #intereses a:hover {
+    font-size: 17px;
+  }
+  #intereses a:hover {
+    font-size: 17px;
+  }
+  #imagenes {
+    font-size: 13px;
+  }
+  #imagenes .img {
+    width: 150px;
+    height: 150px;
+  }
+  #imagenes .img:hover {
+    width: 180px;
+    height: 180px;
+  }
+  form {
+    width: 400px;
+  }
+  .popup {
+    height: 550px;
+    width: 520px;
+  }
+  .popup form {
+    height: 430px;
+    line-height: 18px;
+  }
+  .popup form label {
+    font-size: 12px;
+  }
+  .popup form input {
+    font-size: 12px;
+  }
+  .popup form textarea {
+    font-size: 12px;
+  }
+  .popup form select {
+    font-size: 12px;
+  }
+  .popup form .btn-submit {
+    font-size: 12px;
+    height: 40px;
+    width: 80px;
+  }
+}
+
+@media (max-width: 576px) {
+  .logotipo {
+    width: 80%;
+    height: 50%;
+  }
+  .logotipo .subtitulo {
+    font-size: 16px;
+  }
+  .texto-animado > div span {
+    font-size: 40px;
+  }
+  .typed {
+    font-size: 20px;
+  }
+  .Tooltip {
+    width: 500px;
+    height: 300px;
+  }
+  .Tooltip .info .titulo {
+    font-size: 11px;
+  }
+  .Tooltip .info .parrafo {
+    font-size: 9px;
+  }
+  .Tooltip .info .parrafoDos {
+    font-size: 8px;
+  }
+  .Tooltip .info button {
+    width: 100%;
+    height: 10%;
+    font-size: 8px;
+  }
+  .Tooltip .thumb {
+    height: 100%;
+  }
+  .Tooltip .thumb img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 150px;
+    height: 150px;
+    opacity: 0;
+  }
+  #enganche {
+    font-size: 16px;
+  }
+  #intereses {
+    font-size: 16px;
+  }
+  #intereses a {
+    font-size: 16px;
+  }
+  body.dark #intereses a:hover {
+    font-size: 17px;
+  }
+  #intereses a:hover {
+    font-size: 17px;
+  }
+  #imagenes {
+    font-size: 16px;
+  }
+  #imagenes .img {
+    width: 200px;
+    height: 200px;
+  }
+  #imagenes .img:hover {
+    width: 250px;
+    height: 250px;
+  }
+  form {
+    width: 400px;
+  }
+  .popup {
+    height: 450px;
+    width: 420px;
+  }
+  .popup form {
+    height: 330px;
+    line-height: 11px;
+  }
+  .popup form label {
+    font-size: 10px;
+  }
+  .popup form input {
+    font-size: 10px;
+  }
+  .popup form textarea {
+    font-size: 10px;
+  }
+  .popup form select {
+    font-size: 10px;
+  }
+  .popup form .btn-submit {
+    font-size: 10px;
+    height: 40px;
+    width: 80px;
+  }
+}
+/*# sourceMappingURL=Index.css.map */

@@ -1,0 +1,176 @@
+$blanco: #F1F1F1;
+$negro: #111111;
+*{
+  font-family: "Noto sans", sans-serif; 
+  color: $negro;
+  margin: 0;
+  padding: 0;
+}
+#switch{
+    background: $blanco;
+    padding: 1em;
+    width: 1320px;
+    max-width: 82.3em;
+    height: 1700px;
+    max-height: 106.25em;
+      a{
+        color: $negro;
+        font-size: 1em;
+        text-decoration: none;
+        &:hover{
+            font-size: 1.1em;
+            color: #007EDA;
+            text-decoration: underline;
+            transition: .3s ease all;
+        }
+      }
+    h1{
+        font-size: 2em;
+        color: $negro;
+     }
+     pre{
+         font-size: 1em;
+     }
+    body{
+        margin: 0;
+        padding: 0;
+    }
+    //estilos para imagenes
+#izquierda{
+    height: 300px;
+    width: 300px;
+    border-radius: 500px;
+    box-shadow: 5px 5px 0px $negro;
+    border: 2px solid $negro;
+}
+#centro{
+    height: 300px;
+    width: 300px;
+    float: center;
+    border-radius: 500px;
+    box-shadow: 5px 5px 0px $negro;
+    border: 2px solid $negro;
+}
+#derecha{
+    height: 300px;
+    width: 300px;
+    float:right;
+    border-radius: 500px;
+    box-shadow:5px 5px 0px $negro;
+    border:2px solid $negro;
+}
+//modo nocturno
+    body.dark &{
+        background: $negro;
+        a{
+            color: $blanco;
+            &:hover{
+                color: #007EDA;
+                text-decoration: underline;
+            }
+        }
+        h1{
+            color: $blanco;
+        }
+        pre{
+            color: $blanco;
+        }
+    }
+}
+//=============================================================================================================
+@media (max-width: 1200px){
+    #switch{
+        width: 96.8%;
+        height: 100%;
+        h1{
+            font-size: 16px;
+        }
+        pre{
+            font-size: 14px;
+        }
+        #izquierda{
+            height: 200px;
+            width: 200px;
+        }
+        #centro{
+            height: 200px;
+            width: 200px;
+        }
+        #derecha{
+            height: 200px;
+            width: 200px;
+        }
+    }
+}
+@media (max-width: 992px){
+    #switch{
+        width: 95.9%;
+        height: 100%;
+        h1{
+            font-size: 16px;
+        }
+        pre{
+            font-size: 11px;
+        }
+        #izquierda{
+            height: 200px;
+            width: 200px;
+        }
+        #centro{
+            height: 200px;
+            width: 200px;
+        }
+        #derecha{
+            height: 200px;
+            width: 200px;
+        }
+    }
+}
+@media (max-width: 768px){
+    #switch{
+        width: 94.4%;
+        height: 100%;
+        h1{
+            font-size: 16px;
+        }
+        pre{
+            font-size: 8px;
+        }
+        #izquierda{
+            height: 200px;
+            width: 200px;
+        }
+        #centro{
+            height: 200px;
+            width: 200px;
+        }
+        #derecha{
+            height: 200px;
+            width: 200px;
+        }
+    }
+}
+@media (max-width: 576px){
+    #switch{
+        width: 93.4%;
+        height: 100%;
+        h1{
+            font-size: 16px;
+        }
+        pre{
+            font-size: 7px;
+        }
+        #izquierda{
+            height: 200px;
+            width: 200px;
+        }
+        #centro{
+            height: 200px;
+            width: 200px;
+        }
+        #derecha{
+            height: 200px;
+            width: 200px;
+        }
+    }
+}

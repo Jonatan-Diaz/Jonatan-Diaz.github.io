@@ -1,0 +1,1035 @@
+$negro: #111111;
+$blanco: #FEFEFE;
+$blanco2: #F1F1F1;
+$grisOscuro: #222222;
+$grisClaro: #C8C8C8;
+$grisClaroHover: #ACABAB;
+$azul: #3E60E9;
+$azulHover: #254BE6;
+$azulOscuro: #04095B;
+$sombraDark: 10px, 10px, 20px rgba(170, 170, 170, .16);
+$sombraLight: 10px 10px 20px rgba(0, 0, 0, .16);
+$logotipo: #1A1A1A;
+$profesion: #F2F2F2;
+$primario: #2E5FFF;
+*{font-family: "Noto sans", sans-serif; color: $negro;}
+//====================================================================================================================
+//====================================================================================================================
+//estilos para el div cabecera
+#cabecera{
+   background: $blanco2;
+   text-align: center; 
+   width: 100%;
+   max-width: 87.5em;
+   height: 20%;
+   max-height: 31.25em;
+          body.dark & {
+            background: $negro;
+               h1{
+               span{
+                  color: $blanco;
+                  i{
+                     color: $blanco;
+                  }
+               }
+            }
+         h2{
+            color: $blanco;
+      }
+      h3{
+         color: $blanco;
+   }
+      }
+   }
+   .logotipo{
+      margin: 0.625em;
+      padding: 0.625em;
+      display: inline-block;
+      width: 50%;
+      max-width: 43.75em;
+      height: 240px;
+      max-height: 15em;
+      border: 5px solid $logotipo; //NO TOCAR
+      color: $logotipo;
+      text-align: center;
+      text-decoration: none;
+   }
+   .logotipo .subtitulo{
+      text-align: center;
+      color: $profesion;
+      background: $logotipo;
+      padding: 0.75em 1.25em; 
+      margin: 0em;
+      transition: .5s ease all;
+      font-size: 2.25em;
+      font-family: "Noto sans", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 2px; //NO TOCAR
+   }
+   .logotipo:hover .subtitulo{
+      background: $primario;
+      text-decoration: none;
+   }
+   .texto-animado{
+      display: flex;
+      justify-content: center;
+      overflow: hidden;
+   }
+   .texto-animado > div{
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: .3s ease all;
+   }
+   .texto-animado > div.animacion{
+      transform: translateY(-100px); //NO TOCAR
+   }
+   .texto-animado > div span{
+      color: rgb(255, 0, 0);
+      font-size: 3.125em;
+      font-weight: normal;
+      line-height: 100px; //NO TOCAR
+   }
+   .texto-animado .segunda-linea{
+      position: absolute;
+      top: 100px; //NO TOCAR
+   }
+//====================================================================================================================
+//tooltip para subtitulo
+   /*.Tooltip.activo{
+      opacity: 1;
+      transform: translateY(0px);
+   }*/
+   .Tooltip{
+      display: flex;
+      position: absolute;
+      background: #fff;
+      border-radius: 10px; //NO TOCAR
+      box-shadow: 5px 5px 50px rgba(0,0,0,.20); //NO TOCAR
+      width: 500px;
+      max-width: 31.25em;
+      height: 530px;
+      max-height: 33.125em;
+      z-index: 1000;
+      opacity: 0;
+      transition: .3s ease all;
+      transform: translateY(10px); //NO TOCAR
+      &:hover{
+         opacity: 1;
+         transform: translateY(0px); //NO TOCAR
+      }
+      .info{
+         width: 60%;
+         padding: 1.25em;
+         display: flex;
+         flex-direction: column;
+         justify-content: space-between;
+         .titulo{
+            font-size: 1.25em;
+            color: #3c48e5;
+            font-weight: 600;
+            margin-bottom: 10px; //NO TOCAR
+            text-align: center;
+         }
+         .parrafo{
+            color: #707070;
+            font-size: 0.75em;
+            margin-bottom: 20px; //NO TOCAR
+            text-align: center;
+         }
+         .parrafoDos{
+            margin-bottom: 20px; //NO TOCAR
+            text-align: center;
+         }
+         button{
+            border: none;
+            background: #75ac35;
+            font-weight: bold;
+            padding: 0.625em 1.25em;
+            width: 80%;
+            color: #fff;
+            border-radius: 100px; //NO TOCAR
+            font-family: "Open-Sans", sans-serif;
+            cursor: pointer;
+            text-align: center;
+            &:hover{
+               background: rgba(117, 172, 53, 0.9);
+            }
+         }
+      }
+      &::after{
+         content: "";
+         display: inline-block;
+         border-left: 15px solid transparent; //NO TOCAR
+         border-right: 15px solid transparent; //NO TOCAR
+         border-top: 15px solid #fff; //NO TOCAR
+         position: absolute;
+         right: -15px; //NO TOCAR
+         bottom: calc(65%);
+      }
+      .thumb{
+         height: 40%;
+         img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px 10 0 10px; //NO TOCAR
+         }
+      }
+   }
+   @media screen and (max-width: 768px) {
+      .Tooltip{
+         font-size: 12px;
+         .info{
+            button{
+               width: 100%;
+            }
+         }
+      }
+   }
+//====================================================================================================================
+//====================================================================================================================
+//estilos del body
+    h1{
+       font-size: 1.875em;
+       color: $negro;
+       text-align: center;
+      }
+    h2 {
+       font-size: 1.25em;
+       color: $negro;
+       text-align: right;
+      }
+    h3 {
+       font-size: 1.25em;
+       color: $negro;
+       text-align: right;
+      }
+        h4{
+           text-align: center;
+           font-size: 2.375em;
+         }
+        body{
+           background: $blanco;
+           transition: .3s ease all;
+           margin: 0;
+           padding: 0;
+      &.dark{
+         background: $negro;
+         h4{
+            color: $blanco;
+         }
+      }
+   }
+//====================================================================================================================
+//estilos para el modo nocturno
+        .switch{
+           background: #343d5b;
+           border-radius: 1000px; //NO TOCAR
+           border: none;
+           position: relative;
+           cursor: pointer;
+           display: flex;
+           outline: none;
+           &::after{
+            content: "";
+            display: block;
+            width: 36px;
+            max-width: 2.2em;
+            height: 36px;
+            max-height: 2.2em;
+            position: absolute;
+            background: $blanco;
+            top: 0;
+            left: 0;
+            right: unset;
+            border-radius: 100px; //NO TOCAR
+            transition: .3s ease all;
+            box-shadow: 0px, 0px, 2px 2px rgba(0, 0, 0, .2); //NO TOCAR
+          }
+          &.active{
+             background: orange;
+             color:$negro;
+             &::after{
+                right: 0;
+                left: unset;
+             }
+          }
+           span{
+            width: 30px;
+            max-width: 2.2em;
+            height: 30px;
+            max-height: 2.2em;
+            line-height: 30px; //NO TOCAR
+            display: block;
+            background: none;
+            color:$blanco;
+         }
+      }
+//====================================================================================================================
+//====================================================================================================================
+//estilos para el div enganche
+    #enganche{
+       height: 15%;
+       max-height: 23.625em;
+       width: 100%;
+       max-width: 87.5em;
+       background: #c42419;;
+       display: inline-block;
+       margin: none;
+       padding: none;
+       text-align: center;
+       font-size: 1.875em;
+       pre{
+          font-weight: 600;
+       }
+       body.dark & {
+         background: $sombraDark;
+           pre{
+              i{
+              color: $blanco;
+              }
+           }
+        }
+         }
+//====================================================================================================================
+//====================================================================================================================
+//estilos para el nav intereses
+        #intereses{
+           height: 15%;
+           max-height: 23.625em;
+           width: 100%;
+           max-width: 87.5em;
+           display:inline-block;
+           margin:none;
+           padding:none;
+           background: #64C4A1;
+           text-align: center;
+           font-size: 1.25rem;
+           pre{
+              font-weight: 600;
+           }
+                   body.dark & {
+                     background: $grisOscuro;
+                     box-shadow: $sombraLight;
+                     pre {color: $grisClaro;}
+                     a {
+                        color: $grisClaro;
+                        &:hover {
+                           color: $blanco;
+                           font-size: 1.5625rem;
+                           transition: .3s ease all;
+                        }
+                     }
+                  }
+               }
+                   .enlaces{
+                      color: $negro;
+                      font-weight: 600;
+                      font-size: 1.25rem;
+                      text-decoration: none;
+                            &:hover{
+                               color:#03256e;
+                               text-decoration:underline;
+                               font-size: 1.5625rem;
+                               transition: .3s ease all;
+                           }
+                        }
+//====================================================================================================================
+//====================================================================================================================
+//estilos para el div imagenes
+#imagenes{
+          background: $blanco2;
+          height: 40%;
+          max-height: 62.50em;
+          width: 100%;
+          max-width: 87.5em;
+          display: inline-block;
+          margin: none;
+          padding: none;
+          font-size: 1.25em;
+          text-align: center;
+         body.dark & {
+            color: $blanco;
+            background: $grisOscuro;
+            a{
+               color: #fff;
+            }
+         }
+      }
+      .img {
+         margin: none;
+         padding: none;
+         border: 1px solid $negro; 
+         width: 300px;
+         max-width: 18.75em;
+         height: 300px;
+         max-height: 18.75em;
+           &:hover{
+              width: 450px;
+              max-width: 28.125em;
+              height: 350px;
+              max-height: 21.875em;
+              transition: 300ms all;
+            }
+         }
+         .miTooltip{
+            font-weight: normal;
+            color: $negro;
+            text-decoration: none;
+            position: relative;
+         }
+         .miTooltip:hover{
+            .tooltip-box{
+               opacity: 1;
+            }
+         }
+         .tooltip-box{
+            opacity: 0;
+            position: absolute;
+            background: #000;
+            line-height: 20px; //NO TOCAR
+            z-index: 500;
+            text-align: center;
+            color: #fff;
+            font-size: 0.875rem;
+            padding: 0.3125em 0.625em;
+            border-radius: 5px; //NO TOCAR
+            left: 0;
+            right: 0;
+            bottom: 30px; //NO TOCAR
+         }
+         .tooltip-box::after{
+            content: "";
+            display: block;
+            border-top: 20px solid #000; //NO TOCAR
+            border-left: 7px solid transparent; //NO TOCAR
+            border-right: 7px solid transparent; //NO TOCAR
+            position: absolute;
+            bottom: -10px; //NO TOCAR
+            left: calc(50% - 7px); //NO TOCAR
+         }
+//====================================================================================================================
+//====================================================================================================================
+//footer de la página
+form{
+        height: 10%;
+        max-height: 30em;
+        width: 25%;
+        max-width: 43.75em;
+        border: 1px solid $blanco; //NO TOCAR
+        margin: 1.25em;
+        padding: 1.25em;
+        border: 1px solid $negro; //NO TOCAR
+ }
+   .formulario{
+      text-align:center;
+    form {
+       label{   
+           line-height: 30px; //NO TOCAR
+           font-size: 0.9375em;
+           font-weight: 500;
+           body.dark &{
+              color: $blanco;
+              line-height: 30px; //NO TOCAR
+              font-size: 0.9375em;
+              font-weight: 500;
+           }
+       }
+       input{
+          height: 15px; //NO TOCAR
+          text-align: center;
+          line-height: 52px; //NO TOCAR
+          font-size: 0.9375em;
+          font-weight: 500;
+          border: 1px solid #BBBBBB; //NO TOCAR
+       }
+       textarea{
+          text-align: center;
+          font-size: 0.9375em;
+          font-weight: 500;
+          width: 330px;
+          max-width: 20.625em;
+          height: 80px;
+          max-height: 5em;
+          border: 1px solid #BBBBBB; //NO TOCAR
+       }
+       #btn-abrir-popup{
+          padding: 0 1.25em;
+          height: 40px; //NO TOCAR
+          line-height: 40px; //NO TOCAR
+          border: none;
+          color: $blanco;
+          background: #357DE3;
+          border-radius: 3px; //NO TOCAR
+          font-family: "Montserrat", sans-serif;
+          font-size: 1em;
+          cursor: pointer;
+          transition: .3s ease all;
+          &:hover{
+             background: rgba(94, 125, 227, .9);
+          }
+       }
+    }
+    body.dark & {
+       background: $sombraDark;
+       box-shadow: $sombraLight;
+       color: $blanco;
+       form{
+          color: $blanco;
+       }
+    }
+ }
+//====================================================================================================================
+//popup para formulario
+ .contenedor{
+    width: 90%;
+    max-width: 78.75em;
+    margin: 1.25em auto;
+    text-align: center;
+    .btn-abrir-popup{
+       padding: 0 1.25em;
+       margin-bottom: 20px; //NO TOCAR
+       height: 40px;
+       line-height: 40px; //NO TOCAR
+       border: none;
+       color: $blanco;
+       background: #5f7de3;
+       border-radius: 3px; //NO TOCAR
+       font-family: "Montserrat", sans-serif;
+       font-size: 1em;
+       cursor: pointer;
+       transition: .3s ease all;
+       cursor: pointer;
+       &:hover{
+          background: rgba(94, 125, 227, .9);
+       }
+    }
+    body.dark &{
+       #parrafo{
+          color: $blanco;
+       }
+    }
+ }
+ //popup
+ .overlay{
+    background: rgba(0, 0, 0, .3);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    .active{
+       visibility: visible;
+    }
+ }
+ .popup{
+    background: #f8f8f8;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3); //NO TOCAR
+    border-radius: 3px; //NO TOCAR
+    font-family: "Montserrat", sans-serif;
+    padding: 1.25em;
+    text-align: center;
+    width: 600px;
+    max-width: 37.5em;
+    height: 570px;
+    max-height: 35.625em;
+    transition: .3s ease all;
+    transform: scale(0.7);
+    opacity: 0;
+    .btn-cerrar-popup{
+       font-size: 1em;
+       line-height: 16px; //NO TOCAR
+       display: block;
+       text-align: right;
+       color: #BBBBBB;
+       transition: .3s ease all;
+    }
+    h5{
+       font-size: 1em;
+       font-weight: 500;
+       opacity: 0;
+    }
+    form {
+       width: 80%;
+       max-width: 70em;
+       height: 425px;
+       max-height: 26.5625em;
+       border: 1px solid $negro; //NO TOCAR
+       opacity: 0;
+       label{             
+           font-size: 0.8125rem;
+           font-weight: 500;
+       }
+       input{
+          height: 15px; //NO TOCAR
+          text-align: center;
+          line-height: 52px; //NO TOCAR
+          font-size: 0.8125rem;
+          font-weight: 500;
+          border: 1px solid #BBBBBB; //NO TOCAR
+       }
+       textarea{
+          text-align: center;
+          font-size: 0.8125rem;
+          font-weight: 500;
+          border: 1px solid #BBBBBB; //NO TOCAR
+       }
+       select{
+          font-size: 0.8125rem;
+          font-weight: 500;
+       }
+       .btn-submit{
+          padding: 0 1.25em;
+          height: 40px; //NO TOCAR
+          line-height: 40px; //NO TOCAR
+          border: none;
+          color: $blanco;
+          background: #357DE3;
+          border-radius: 3px; //NO TOCAR
+          font-family: "Montserrat", sans-serif;
+          font-size: 1em;
+          cursor: pointer;
+          transition: .3s ease all;
+          &:hover{
+             background: rgba(94, 125, 227, .9);
+          }
+       }
+   }
+ }
+ //animaciones de popup
+ .popup.active{
+    opacity: 1;
+    transform: scale(1);
+ }
+ .popup.active h5{
+    animation: entradaTitulo 2s ease .5s forwards;
+ }
+ .popup form{
+    animation: entradaForm 1s ease 2s forwards;
+ }
+ @keyframes entradaTitulo{
+    from{
+       transform: translateY(-25px);
+       opacity: 0;
+    }
+    to{
+       transform: translateY(0);
+       opacity: 1;
+    }
+ }
+ @keyframes entradaForm{
+    from{
+       opacity: 0;
+    }
+    to{
+       opacity: 1;
+    }
+ }
+ //=================================================================================================================
+ //=================================================================================================================
+//media queries para responsive desing
+@media (max-width: 1200px){//pc más pequeñas
+   .logotipo{
+      width: 80%;
+      height: 50%;
+      .subtitulo{
+         font-size: 16px;
+      }
+   }
+   .texto-animado > div span{
+      font-size: 40px;
+   }
+   .typed{
+      font-size: 20px;
+   }
+   .Tooltip{
+      width: 500px;
+      height: 300px;
+      .info{
+         .titulo{
+            font-size: 14px;
+         }
+         .parrafo{
+            font-size: 12px;
+         }
+         .parrafoDos{
+            font-size: 11px;
+         }
+         button{
+            width: 100%;
+            height: 10%;
+            font-size: 11px;
+         }
+      }
+      .thumb{
+         height: 100%;
+      img{
+         object-fit: cover;
+         width: 200px;
+         height: 200px;
+         opacity: 1;
+      }
+   }
+   }
+   #enganche{
+      font-size: 16px;
+   }
+   #intereses{
+      font-size: 16px;
+      a{
+         font-size: 16px;
+         body.dark &{
+            &:hover{
+               font-size: 17px;
+            }
+         }
+         &:hover{
+            font-size: 17px;
+         }
+      }
+   }
+   #imagenes{
+      font-size: 16px;
+      .img{
+         width: 230px;
+         height: 230px;
+         &:hover{
+            width: 250px;
+            height: 250px;
+         }
+      }
+   }
+   form{
+      width: 400px;
+   }
+   .popup{
+      height: 550px;
+      width: 520px;
+      form{
+         height: 430px;
+         line-height: 18px;
+         label{
+            font-size: 12px;
+         }
+         input{
+            font-size: 12px;
+         }
+         textarea{
+            font-size: 12px;
+         }
+         select{
+            font-size: 12px;
+         }
+         .btn-submit{
+            font-size: 12px;
+            height: 40px;
+            width: 80px;
+         }
+      }
+   }
+}
+@media (max-width: 992px){ //pantalla para tabletas
+   .logotipo{
+      width: 80%;
+      height: 50%;
+      .subtitulo{
+         font-size: 16px;
+      }
+   }
+   .texto-animado > div span{
+      font-size: 40px;
+   }
+   .typed{
+      font-size: 20px;
+   }
+   .Tooltip{
+      width: 500px;
+      height: 300px;
+      .info{
+         .titulo{
+            font-size: 14px;
+         }
+         .parrafo{
+            font-size: 12px;
+         }
+         .parrafoDos{
+            font-size: 11px;
+         }
+         button{
+            width: 100%;
+            height: 10%;
+            font-size: 11px;
+         }
+      }
+      .thumb{
+         height: 100%;
+      img{
+         object-fit: cover;
+         width: 150px;
+         height: 150px;
+         opacity: 0;
+      }
+   }
+   }
+   #enganche{
+      font-size: 16px;
+   }
+   #intereses{
+      font-size: 16px;
+      a{
+         font-size: 16px;
+         body.dark &{
+            &:hover{
+               font-size: 17px;
+            }
+         }
+         &:hover{
+            font-size: 17px;
+         }
+      }
+   }
+   #imagenes{
+      font-size: 16px;
+      .img{
+         width: 200px;
+         height: 200px;
+         &:hover{
+            width: 250px;
+            height: 250px;
+         }
+      }
+   }
+   form{
+      width: 400px;
+   }
+   .popup{
+      height: 550px;
+      width: 520px;
+      form{
+         height: 430px;
+         line-height: 18px;
+         label{
+            font-size: 12px;
+         }
+         input{
+            font-size: 12px;
+         }
+         textarea{
+            font-size: 12px;
+         }
+         select{
+            font-size: 12px;
+         }
+         .btn-submit{
+            font-size: 12px;
+            height: 40px;
+            width: 80px;
+         }
+      }
+   }
+}
+@media (max-width: 768px){ //pantalla para tabletas
+   .logotipo{
+      width: 80%;
+      height: 50%;
+      .subtitulo{
+         font-size: 16px;
+      }
+   }
+   .texto-animado > div span{
+      font-size: 40px;
+   }
+   .typed{
+      font-size: 20px;
+   }
+   .Tooltip{
+      width: 500px;
+      height: 300px;
+      .info{
+         .titulo{
+            font-size: 12px;
+         }
+         .parrafo{
+            font-size: 10px;
+         }
+         .parrafoDos{
+            font-size: 9px;
+         }
+         button{
+            width: 100%;
+            height: 10%;
+            font-size: 9px;
+         }
+      }
+      .thumb{
+         height: 100%;
+      img{
+         object-fit: cover;
+         width: 130px;
+         height: 130px;
+         opacity: 0;
+      }
+   }
+   }
+   #enganche{
+      font-size: 16px;
+   }
+   #intereses{
+      font-size: 16px;
+      a{
+         font-size: 16px;
+         body.dark &{
+            &:hover{
+               font-size: 17px;
+            }
+         }
+         &:hover{
+            font-size: 17px;
+         }
+      }
+   }
+   #imagenes{
+      font-size: 13px;
+      .img{
+         width: 150px;
+         height: 150px;
+         &:hover{
+            width: 180px;
+            height: 180px;
+         }
+      }
+   }
+   form{
+      width: 400px;
+   }
+   .popup{
+      height: 550px;
+      width: 520px;
+      form{
+         height: 430px;
+         line-height: 18px;
+         label{
+            font-size: 12px;
+         }
+         input{
+            font-size: 12px;
+         }
+         textarea{
+            font-size: 12px;
+         }
+         select{
+            font-size: 12px;
+         }
+         .btn-submit{
+            font-size: 12px;
+            height: 40px;
+            width: 80px;
+         }
+      }
+   }
+}
+@media (max-width: 576px){ //pantalla para dispositivos móbiles
+   .logotipo{
+      width: 80%;
+      height: 50%;
+      .subtitulo{
+         font-size: 16px;
+      }
+   }
+   .texto-animado > div span{
+      font-size: 40px;
+   }
+   .typed{
+      font-size: 20px;
+   }
+   .Tooltip{
+      width: 500px;
+      height: 300px;
+      .info{
+         .titulo{
+            font-size: 11px;
+         }
+         .parrafo{
+            font-size: 9px;
+         }
+         .parrafoDos{
+            font-size: 8px;
+         }
+         button{
+            width: 100%;
+            height: 10%;
+            font-size: 8px;
+         }
+      }
+      .thumb{
+         height: 100%;
+      img{
+         object-fit: cover;
+         width: 150px;
+         height: 150px;
+         opacity: 0;
+      }
+   }
+   }
+   #enganche{
+      font-size: 16px;
+   }
+   #intereses{
+      font-size: 16px;
+      a{
+         font-size: 16px;
+         body.dark &{
+            &:hover{
+               font-size: 17px;
+            }
+         }
+         &:hover{
+            font-size: 17px;
+         }
+      }
+   }
+   #imagenes{
+      font-size: 16px;
+      .img{
+         width: 200px;
+         height: 200px;
+         &:hover{
+            width: 250px;
+            height: 250px;
+         }
+      }
+   }
+   form{
+      width: 400px;
+   }
+   .popup{
+      height: 450px;
+      width: 420px;
+      form{
+         height: 330px;
+         line-height: 11px;
+         label{
+            font-size: 10px;
+         }
+         input{
+            font-size: 10px;
+         }
+         textarea{
+            font-size: 10px;
+         }
+         select{
+            font-size: 10px;
+         }
+         .btn-submit{
+            font-size: 10px;
+            height: 40px;
+            width: 80px;
+         }
+      }
+   }
+}

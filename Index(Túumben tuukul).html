@@ -1,0 +1,223 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta name="description" content="Sitio web que impulsa proyectos e ideas de empresarios con poca o nula experiencia"/>
+        <meta name="author" content="Jonatan Emanuel Diaz Ramirez"/>
+        <meta name="keywords" content="Empresarios, ideas, productos y servicioss"/>
+        <meta charset="utf-8"/>
+        <link rel="shorcut icon" type="image/x-icon" href="Imágenes/Logo.icon"/>
+        <link rel="stylesheet" href="Css/Index.css"/>
+        <link rel="stylesheet" href="Css/Contacto.css"/>
+        <!--Fuentes-->
+        <link rel="preconnect" href="https://fonts.gstatic.com"/>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neve&family=Noto+Sans&display=swap"/>
+        <noscript>Lo sentimos, contenido no disponible</noscript>
+         <!--Enlace para trabajar con los iconos de Fontawesome-->
+         <script src="https://kit.fontawesome.com/2c36e9b7b1.js"></script>
+        <title>
+            Túumben tuukul
+        </title>
+    </head>
+    <body>
+        <!--div cabecera-->
+        <div id="cabecera">
+            <a href="#" class="logotipo">
+                <div class="texto-animado" id="logo">TÚUMBEN TUUKUL</div>
+        <!--inicia el div icono-->
+                <div id="icono">
+                <p class="subtitulo">El sitio web para empresarios</p>
+                <div class="Tooltip" id="Tooltip">
+                <!--div Tooltip-->
+                    <div class="thumb">
+                        <img src="Imágenes/Empresarios.jpg" alt="Elemento no disponible">
+                    </div>
+                    <div class="info">
+                        <h6 class="titulo">¡COMIENZA A APRENDER!</h3>
+                        <p class="parrafo">Las mejores herramientas para cumplir tus sueños</p>
+                        <p class="parrafoDos">Aprende todo lo necesario para tener éxito en tus emprendimientos.<br/>
+                            Desde estrategias de marketing, ventas, estados financieros, planes de negocio y más.<br/>
+                            Todo esto de la mano de gente preparada con años de experiencia.<br/><br/>
+                            ¡Echa un vistazo! 
+                        </p>
+                        <button>
+                            ¡Quiero recibir información!
+                        </button>
+                    </div>
+                </div>
+                <!--aquí se cierra el div Tooltip-->
+        <!--cierra el div icono-->
+            </div>
+            </a>
+            <h1><span class="typed"></span></h1>
+            <h2>999 292 63 93</h2>
+            <h3>tuumbentuukul@gmail.com</h3>
+            <button id="switch" class="switch">
+                <span><i class="fas fa-sun"></i></span>
+                <span><i class="fas fa-moon"></i></span>
+            </button>
+        </div>
+        <!--cerramos el div cabecera-->
+<!--div enganche-->
+<div id="enganche">
+<pre><i>¿Te gustaría generar una presencia web?</i>
+<i>¿Quieres expandir tu negocio pero no sabes cómo?</i>
+<i>¿Quieres alcanzar más gente y generar interés?</i>
+<i>¡Estamos aquí para ti!</i>
+</pre>
+</div>
+<!--cerramos el div enganche-->
+<!--nav intereses-->
+<nav id="intereses">
+<pre>Algunas herramientas para ti, da click sobre cualquiera:
+<a href="./Misión y visión.html" class="enlaces">Misión y visión</a>
+<a href="./Redes sociales.html" class="enlaces">¿Por qué son importantes las redes sociales?</a>
+<a href="./Diseño web.html" class="enlaces">¿Cómo el diseño web puede ser tu mejor heramienta?</a>
+<a href="./SEO.html" class="enlaces">Una pequeña explicación del SEO</a>
+</pre>
+</nav>
+<!--cerramos el nav intereses-->
+            <!--div imagenes-->
+                        <div id="imagenes">
+                            <br/>
+                        <a class="miTooltip">
+                        ¡Muestracelo a todo el mundo!
+                        <span class="tooltip-box">¡Aprende las mejores estrategias de marketing!<br/>Da click a la imágen</span>
+                        </a>
+                        <img src="Imágenes/Mundo.jpg" class="img" alt="Imagen no disponible"/>
+                        <img src="Imágenes/Cursor.jpg" class="img" alt="Imagen no disponible"/>
+                        <a class="miTooltip">
+                        ¡La información que necesitas!
+                        <span class="tooltip-box">¡Genera un plan de ventas exitoso!<br/>Da click a la imágen</span>
+                        </a>
+                        <br/>
+                        <img src="Imágenes/Manos.jpg" class="img" alt="Imagen no disponible"/>
+                        <br/>
+                        <a class="miTooltip">
+                        Has que tu negocio crezca.
+                        <span class="tooltip-box">¡Aprende a identificar tu cliente potencial!<br/>Da click a la imágen</span>
+                        </a>
+                        </div>
+            <!--cerramos el div imagenes-->
+<!--div formulario-->
+        <div class="formulario"><br/>
+            <div class="contenedor">
+            <p id="parrafo">¡Habla con nosotros!</p>
+            <button class="btn-abrir-popup" id="btn-abrir-popup">Da clic aquí</button>
+            </div>
+                <!--el atributo onkeypress llama a la función mientras que onpaste evita que se peguen números con ctrl+v-->
+                <center>
+                <form class="formulario" action="mailto:tuumbentuukul@gmail.com" name="formulario1" method="POST">
+                ¡Tus opiniones son importantes!<br></br>
+                <label>Ingresa tu nombre: </label><input type="text" name="Nombre" id="Nombre" placeholder="Nombre completo" onkeypress="return sololetras(event)" onpaste="return false"/><br/>
+                <label>Ingresa tu correo: </label><input type="email" name="Correo" id="Correo" placeholder="Correo eléctronico"/><br/>
+                <label>¿Algo que nos quieras decir?:</label><br/>
+                <textarea type="text" name="Mensaje" id="Mensaje" placeholder="Dudas, sugerencias, comentarios" onkeypress="return sololetras(event)" onpaste="return false"></textarea><br></br>
+                <input type="submit" id="btn-abrir-popup" value="Enviar"/>
+                </form>
+                </center>
+                <!--div de redes sociales-->
+                <div class="wrapper">
+                    <div class="icon facebook">
+                        <div class="tooltip">Facebook</div>
+                        <span><i class="fab fa-facebook-f"></i></span>
+                    </div>
+                    <div class="icon twitter">
+                        <div class="tooltip">Twitter</div>
+                        <span><i class="fab fa-twitter"></i></span>
+                    </div>
+                    <div class="icon instagram">
+                        <div class="tooltip">Instagram</div>
+                        <span><i class="fab fa-instagram"></i></span>
+                    </div>
+                    <div class="icon youtube">
+                        <div class="tooltip">Youtube</div>
+                        <span><i class="fab fa-youtube"></i></span>
+                    </div>
+                </div><br></br>
+                <!--cerramos el div de redes sociales-->
+        </div>
+<!--cerramos el div formulario-->
+        <h4>¡Deja que nuestro equipo te guie!</h4>
+        <!--popup para contactar-->
+        <div class="contenedor">
+            <!--incia el div overlay-->
+                <div class="overlay" id="overlay">
+                    <div class="popup" id="popup">
+                        <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+                        <h5><i><b>¡COMIENZA YA!</b></i></h5>
+                        <!--aquí inicia el formulario-->
+                        <form action="mailto:tuumbentuukul@gmail.com - Gmail mail.google.com" name="formulario" method="POST">
+                        <Label for="Nombre">Nombre:</label>
+                        <!--el atributo onkeypress llama a la función mientras que onpaste evita que se peguen números con ctrl+v-->
+                        <Input type="text" name="Nombre" id="Nombre" placeholder="Nombre completo" onkeypress="return sololetras(event)" onpaste="return false" required/>
+                        <Label for="Edad">Edad:</label>
+                        <Input type="text" name="numero" id="Edad" placeholder="Edad" onkeypress="return solonumeros(event)" onpaste="return false" required/>
+                        <br></br>
+                        <Label for="Correo">Correo electrónico:</label>
+                        <br=1></br>
+                        <Input type="email" name="Correo" id="Correo" placeholder="JoséPérez@gmail.com" required/><br></br>
+                        <Input type="checkbox" name="género" id="Género" value="Hombre"/><Label for="H">Hombre</Label>
+                        <Input type="checkbox" name="género" id="Género" value="Mujer"/><Label for="M">Mujer</Label>
+                        <br></br>
+                        <Label for="negocio"> Es:</Label>
+                        <select value="Tipo">
+                        <option value="EI">Un negocio</option><br="1"></br>
+                        <option value="SP">Un servicio</option><br="1"></br>
+                        <option value="ST">Un producto</option><br="1"></br>
+                        <option value="SS">Una empresa</option><br="1"></br>
+                        </select>
+                        <Label for="negocio"> En:</Label>
+                        <Select name="Lugares" id="Lugar" value="Lugar">
+                        <Option value="méxico">México</option>
+                        <Option value="colombia">Colombia</option>
+                        <Option value="venezuela">Venezuela</option>
+                        <Option value="panamá">Panamá</option>
+                        <Option value="perú">Perú</option>
+                        <Option value="costa rica">Costa rica</option>
+                        <Option value="argentina">Argentina</option>
+                        <Option value="chile">Chile</option>
+                        <Option value="Puerto rico">Puerto Rico</option>
+                        <Option value="españa">España</option>
+                        <Option value="e.u">Estados unidos</option>
+                        <Option value="canadá">Canadá</option>
+                        </Select>
+                        <br></br>
+                        <Label for="Negocio">Platicanos de tu negocio/producto:</label>
+                        <br></br>
+                        <textarea cols="50" rows="3" type="text" name="negocio" id="Negocio" placeholder="Describelo" onkeypress="return sololetras(event)" onpaste="return false" required></textarea>
+                        <br></br>
+                        <Label for="Nombre">¿Cuál es el nombre de tu negocio/producto?</label>
+                        <Input type="text" name="nombre negocio" id="Nombredenegocio" placeholder="Nombre de negocio" onkeypress="return sololetras(event)" onpaste="return false" required/>
+                        <br></br>
+                        <Label for="Tipo">¿Cuenta con un establecimiento?, seleccione el tipo</Label>
+                        <Select name="Establecimiento" id="Establecimiento" placeholder="Establecimiento"><br=1></br>
+                        <Option>Restaurante</option>
+                        <Option>Gimnasio</option>
+                        <Option>Spa</option>
+                        <Option>Taller mecánico</option>
+                        <Option>Abogados</option>
+                        <Option>Contadores</option>
+                        <Option>Escuela de idiomas</option>
+                        <Option>Bienes raíces</option>
+                        <Option>Consultorios</option>
+                        <Option>Hoteles</option>
+                        <Option>Salón de fiesta</option>
+                        <Option>Peluquería</option>
+                        <Option>Otro</option>
+                        </Select>
+                        <br></br>
+                        <Label for="Otro">Escribalo:</label>
+                        <Input type="text" name="otro" id="otro" placeholder="Escribe cualquier otro" onkeypress="return sololetras(event)" onpaste="return false" required/>
+                        <br></br>
+                        <Input type="submit" class="btn-submit" name="btn" id="btn" value="Enviar"/>
+                        </Form>
+                    </div>
+        <!--cerramos el div de popup-->
+                </div>
+            <!--cerramos el div de overlay-->
+        </div>
+        <!--cerramos el popup para contactar-->
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="JS/Index.js"></script>
+</html>
