@@ -9,6 +9,10 @@ body {
   background: #F1F1F1;
 }
 
+body.dark {
+  background: #111111;
+}
+
 #switch {
   background: #F1F1F1;
   padding: 1rem;
@@ -39,11 +43,6 @@ body {
 
 #switch pre {
   font-size: 1em;
-}
-
-#switch body {
-  margin: 0;
-  padding: 0;
 }
 
 #switch img {

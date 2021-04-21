@@ -4,10 +4,15 @@ $negro: #111111;
   font-family: "Noto sans", sans-serif; 
   color: $negro;
   margin: 0;
-  padding: 0;}
-  body{
-background: $blanco;
-  }
+  padding: 0;
+}
+  //body
+body{
+    background: $blanco;
+    &.dark{
+        background: $negro;
+    }
+}
 #switch{
     background: $blanco;
     padding: 1rem;
@@ -34,11 +39,6 @@ h1{
 }
 pre{
     font-size: 1em;
-}
-//body
-body{
-    margin: 0;
-    padding: 0;
 }
 //estilos para imagen
 img{

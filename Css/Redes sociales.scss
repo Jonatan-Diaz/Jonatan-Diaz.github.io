@@ -6,9 +6,13 @@ $negro: #111111;
   margin: 0;
   padding: 0;
 }
+//body
 body{
     background: $blanco;
+    &.dark{
+        background: $negro;
     }
+}
 #switch{
     background: $blanco;
     padding: 1em;
@@ -34,10 +38,6 @@ body{
      pre{
          font-size: 1em;
      }
-    body{
-        margin: 0;
-        padding: 0;
-    }
     //estilos para imagenes
 #izquierda{
     height: 300px;

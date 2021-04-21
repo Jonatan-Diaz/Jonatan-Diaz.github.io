@@ -7,9 +7,13 @@ $negro: #111111;
     margin: 0;
     padding: 0;
   }
+  //body
   body{
     background: $blanco;
+    &.dark{
+        background: $negro;
     }
+}
   #switch{
     background: $blanco;
     padding: 1rem;

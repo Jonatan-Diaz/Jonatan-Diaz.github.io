@@ -6,8 +6,12 @@ $negro: #111111;
   margin: 0;
   padding: 0;
 }
+//body
 body{
     background: $blanco;
+    &.dark{
+        background: $negro;
+    }
 }
 #switch{
     background: $blanco;
@@ -44,11 +48,6 @@ h3{
 h4{
     font-size: 2em;
     color: $negro;
-}
-//body
-body{
-    margin: 0;
-    padding: 0;
 }
 //estilos para la imagen
 img{
